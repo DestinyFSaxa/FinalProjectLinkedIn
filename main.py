@@ -55,3 +55,5 @@ recall_sklearn = report['Using LinkedIn']['recall']
 f1_score_sklearn = report['Using LinkedIn']['f1-score']
 
 
+educ2 = st.selectbox("Education level",
+options = ["High School Diploma","College Degree","Graduate Degree"])
