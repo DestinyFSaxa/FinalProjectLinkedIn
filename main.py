@@ -54,7 +54,4 @@ precision_sklearn = report['Using LinkedIn']['precision']
 recall_sklearn = report['Using LinkedIn']['recall']
 f1_score_sklearn = report['Using LinkedIn']['f1-score']
 
-print("\nManual vs Sklearn Metrics:")
-print(f"Precision (manual): {precision:.4f}, Precision (sklearn): {precision_sklearn:.4f}")
-print(f"Recall (manual): {recall:.4f}, Recall (sklearn): {recall_sklearn:.4f}")
-print(f"F1 Score (manual): {fscore:.4f}, F1 Score (sklearn): {f1_score_sklearn:.4f}")
+
