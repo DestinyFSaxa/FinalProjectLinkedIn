@@ -7,7 +7,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDis
 from sklearn.metrics import classification_report
 st.markdown("### LinkedIn Usage")
 s = pd.read_csv("social_media_usage.csv")
-s.shape
 
 
 def clean_sm(x):
@@ -57,7 +56,17 @@ f1_score_sklearn = report['Using LinkedIn']['f1-score']
 income = st.selectbox("What is your Annual Salary?",
 options = ["Less than $10,000","10 to under $20,000","20 to under $30,000","30 to under $40,000","40 to under $50,000","50 to under $75,000","75 to under $100,000","100 to under $150,000","$150,000 or more?"])
 
-age = st.slider(label="How Old Are You?",min_value=1,max_value=97,value=7)
 
 educ2 = st.selectbox("What is your Education level?",
 options = ["Less Than High School","Some High School","High School Diploma","Some College(No Degree)", "Associate Degree","College Degree","Some Graduate(No Degree)","Graduate Degree"])
+
+par = st.selectbox("Are you a parent?",
+                   options = ["Yes","No"])
+
+marital = st.selectbox("What is your marital status?",
+                       options = ["Married","Single"])
+
+gender = st.selectbox("What is your marital status?",
+                       options = ["Male","Female"])
+
+age = st.slider(label="Enter Age",min_value=1,max_value=97,value=7)
