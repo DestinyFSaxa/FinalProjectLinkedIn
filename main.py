@@ -33,3 +33,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 logistic_model = LogisticRegression(class_weight='balanced', random_state=42)
 
 logistic_model.fit(X_train, y_train)
+
+
+
+y_pred = logistic_model.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+print("Model Accuracy:", accuracy)
+
+cm = confusion_matrix(y_test, y_pred)
+
+cm_display = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[0, 1])
