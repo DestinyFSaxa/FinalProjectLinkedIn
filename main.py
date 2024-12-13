@@ -44,3 +44,17 @@ print("Model Accuracy:", accuracy)
 cm = confusion_matrix(y_test, y_pred)
 
 cm_display = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[0, 1])
+
+report = classification_report(y_test, y_pred, target_names=['Not Using LinkedIn', 'Using LinkedIn'], output_dict=True)
+
+print("Classification Report:")
+print(report)
+
+precision_sklearn = report['Using LinkedIn']['precision']
+recall_sklearn = report['Using LinkedIn']['recall']
+f1_score_sklearn = report['Using LinkedIn']['f1-score']
+
+print("\nManual vs Sklearn Metrics:")
+print(f"Precision (manual): {precision:.4f}, Precision (sklearn): {precision_sklearn:.4f}")
+print(f"Recall (manual): {recall:.4f}, Recall (sklearn): {recall_sklearn:.4f}")
+print(f"F1 Score (manual): {fscore:.4f}, F1 Score (sklearn): {f1_score_sklearn:.4f}")
