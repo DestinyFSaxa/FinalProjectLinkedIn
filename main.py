@@ -55,5 +55,8 @@ recall_sklearn = report['Using LinkedIn']['recall']
 f1_score_sklearn = report['Using LinkedIn']['f1-score']
 
 
+
+age = st.slider(label="Enter Age",min_value=1,max_value=97,value=7)
+
 educ2 = st.selectbox("What is your Education level?",
 options = ["Less Than High School","Some High School","High School Diploma","Some College(No Degree)", "Associate Degree","College Degree","Some Graduate(No Degree)","Graduate Degree"])
