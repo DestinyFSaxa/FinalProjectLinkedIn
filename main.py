@@ -66,7 +66,7 @@ par = st.selectbox("Are you a parent?",
 marital = st.selectbox("What is your marital status?",
                        options = ["Married","Single"])
 
-gender = st.selectbox("What is your marital status?",
+gender = st.selectbox("What is your gender?",
                        options = ["Male","Female"])
 
 age = st.slider(label="Enter Age",min_value=1,max_value=97,value=7)
